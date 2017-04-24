@@ -1,2 +1,2 @@
-# a2-data-exporation
-INFO 474 a2-data-exporation
+# a2-data-exploration
+INFO 474 a2-data-exploration

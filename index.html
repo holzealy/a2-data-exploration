@@ -7,17 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Assignment 2: Data Exploration</title>
 
-    <!--My stylesheet-->
-    <link rel="stylesheet" href="css/main.css">
+    <!-- Libraries -->
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.7.4/d3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.js"></script>
+    <link rel="stylesheet" href="//rawgithub.com/Caged/d3-tip/master/examples/example-styles.css">
 
-    <!--D3 CDN-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.7.4/d3.min.js"></script>
+    <!-- My stylesheet file -->
+    <link rel="stylesheet" href="css/main.css" />
 
-    <!-- Load jQuery library -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-    <!--My script-->
-    <script src="js/script.js"></script>
+    <!-- my script file -->
+    <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -25,13 +27,57 @@
     <div class="jumbotron container-fluid">
         <div class="container">
             <h1>Assignment 2: Data Exploration</h1>
+            <h2>INFO 474 | By Alyssa Holzer</h2>
         </div>
     </div>
 
     <div class="container">
-        <h2>Subtitle</h2>
+        <h3>U.S. State Average Smoking Prevalence 1996-2012</h3>
 
-        <svg id="viz"></svg>
+        <h4>Data Filters:</h4>
+        <select id="year" class="input-lg controls">
+            <option value="1996">1996</option>
+            <option value="1997">1997</option>
+            <option value="1998">1998</option>
+            <option value="1999">1999</option>
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+        </select>
+
+        <div class="btn-group controls" data-toggle="buttons">
+            <label class="btn btn-primary btn-lg active">
+		        <input value="Both" class="sex" type="radio" name="options" id="option1" autocomplete="off" checked>Both Sexes
+		    </label>
+            <label class="btn btn-primary btn-lg">
+		        <input value="Males" class="sex" type="radio" name="options" id="option2" autocomplete="off">Males
+		    </label>
+            <label class="btn btn-primary btn-lg">
+		        <input value="Females" class="sex" type="radio" name="options" id="option3" autocomplete="off">Females
+		    </label>
+        </div>
+
+        <div class="btn-group controls" data-toggle="buttons">
+            <label class="btn btn-primary btn-lg active">
+		        <input value="total" type="radio" name="options" id="option1" autocomplete="off" checked>Total Smoking
+		    </label>
+            <label class="btn btn-primary btn-lg">
+		        <input value="daily" type="radio" name="options" id="option2" autocomplete="off">Daily Smoking
+		    </label>
+        </div>
+
+        <div id="vis"></div>
+
+        
     </div>
 
 </body>
