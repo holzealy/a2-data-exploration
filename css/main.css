@@ -13,12 +13,8 @@ body {
     padding-bottom: 2em;
 }
 
-h1, h2, h3 {
-    font-weight: 300;
-}
-
 h3 {
-    padding-bottom: 50px;
+    padding-bottom: 20px;
 }
 
 .controls {
@@ -36,4 +32,16 @@ h3 {
 .bar {
   fill: dodgerblue;
   opacity: .4;
+}
+
+#content {
+    text-align: center;
+}
+
+#description {
+    margin-top: 50px;
+}
+
+#description p {
+    text-align: left;
 }

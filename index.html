@@ -28,10 +28,11 @@
         <div class="container">
             <h1>Assignment 2: Data Exploration</h1>
             <h2>INFO 474 | By Alyssa Holzer</h2>
+            <p>Data from the Institute for Health Metrics and Evaluation</p>
         </div>
     </div>
 
-    <div class="container">
+    <div id="content" class="container">
         <h3>U.S. State Average Smoking Prevalence 1996-2012</h3>
 
         <h4>Data Filters:</h4>
@@ -77,7 +78,17 @@
 
         <div id="vis"></div>
 
-        
+        <div id="description">
+            <h3>About This Visualization</h3>
+            <p>
+                The visualization above is a bar chart. States in the U.S. are along the x-axis and the prevalence of smoking in percent is shown on the y-axis. With a bar chart, the user must judge the position of the bars on a common scale, which is the y-axis in this case, to determine the values corresponding to each bar. The bars encode the smoking prevalence for each state and their lengths can be compared to judge if the prevalence of smoking is higher or lower in different states. I chose a bar chart to visualize this data because it requires the elementary perceptual tasks of judging position and length to decode information from the chart, both which are relatively easy. Bar charts are particularly helpful for comparing things between non-numeric categories, in this case, prevalence between different states. I considered sorted the data by prevalence, with the states with lowest smoking prevalence to the left and the ones with a higher prevalence to the right. However, because the order of the states can change depending on the filters applied to the data, it would be harder to focus on an individual state if you wanted to apply filters and see how the prevalence changed just in that state. Instead, the states are ordered alphabetically so that it is easier to compare changes across filters. The user can compare data across year, sex, or type of smoking without showing everything at the same time, which can be confusing, by toggling filters. This visualization was designed mostly for making comparisons bewteen states with the same criteria, however, the user can also compare data for an individual state across filters by judging whether the height of the bar increases or decreases during the transition to learn how prevalence for that particular state changes across the different filters. There are a lot of specific questions about smoking prevalence that this visualization could be used to answer and the filters help in answering these questions by dividing data based on year, sex, and type of smoking.
+            </p>
+
+            <p>
+                The original csv file for this dataset contained rows for national level, state level, and county level smoking prevalence. Smoking prevalence is likely to vary by location so it is important to show this and I chose to just include state level data because I find it easier to digest than count level data. The data was also divided by year, which I have incorporated into this visualization by allowing the user to select a year to display from the drop down list. This allows the user to ask questions about the prevalence of smoking over time and compare data between different years. The user can also learn which states have changed the most by comparing the data for the first and last years listed. The dataset also included data for males and females both combined and individually. I thought it was important to include each of these filters because they can be used to answer questions about whether there is a difference in smoking prevalence based on sex. The third filter toggles between total smoking, which includes anybody who smokes, and daily smoking, which only includes people who smoke every single day. This can be used to make comparisons and answer questions about the level of difference in prevalence of all people who smoke and people that smoke daily in different states. The combination of filters make this visualization particularly helpful for answering very specific questions, such as "What was the prevalence of daily smoking for females in the year 2005 in Washington state?" It is super easy to use the filters to select the year 2005, females, and daily smoking, then find Washington state along the x-axis, hover over it's bar and learn that the daily smoking prevalence for females in 2005 was 14.39%. The next question someone might ask is "Is this prevalence higher or lower than that of other states?" This question can be answered by comparing the height of the Washington state bar to the heights of the bars for all the other states. At a glance, the Washington bar seems shorter than a good number of the others. The user can hover over all the different bars to learn the exact prevalences for the different states. If the user wanted to know the difference in prevalence for Washington state and Kentucky, for example, they could hover over the bar for Kentucky and learn that the daily smoking prevalence for females in 2005 was 23.81% in Kentucky, which is reasonably higher than that of Washington state. Using the various filters, I have learned that smoking prevalence has generally decreased between 1996 and 2012, males smoke more on average than females, and the level of daily smoking prevalence is considerably lower than total smoking prevalence in most state.
+            </p>
+        </div>
+
     </div>
 
 </body>

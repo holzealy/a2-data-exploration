@@ -11,4 +11,3 @@ smoking.prev <- read.csv("SMOKING_PREVALENCE_1996_2012.csv", stringsAsFactors = 
 colnames(smoking.prev) <- c('state', 'sex', 'year', 'total', 'daily')
 
 write.csv(smoking.prev, 'prepped_prev_data.csv', row.names = FALSE)
-
